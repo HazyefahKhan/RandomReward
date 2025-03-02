@@ -8,6 +8,7 @@ A simple Python program that simulates rolling dice with win conditions.
 - Displays the results of each die roll
 - Determines if the user won based on a win condition
 - Win condition: All three dice must be ≥ 15
+- Calculates and displays the sum of dice rolls when the user wins
 
 ## How to Run
 

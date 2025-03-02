@@ -27,6 +27,18 @@ def check_win(dice_results, win_threshold=15):
     """
     return all(result >= win_threshold for result in dice_results)
 
+def calculate_sum(dice_results):
+    """
+    Calculate the sum of all dice results.
+    
+    Args:
+        dice_results (list): List of dice roll results
+        
+    Returns:
+        int: Sum of all dice results
+    """
+    return sum(dice_results)
+
 def main():
     """Main function to run the dice rolling program."""
     print("Welcome to the Dice Roller!")
@@ -43,7 +55,10 @@ def main():
     
     # Check win condition and display result
     if check_win(dice_results):
+        # Calculate and display sum only if user won
+        dice_sum = calculate_sum(dice_results)
         print("\n🎉 Congratulations! You WON! All dice are ≥ 15. 🎉")
+        print(f"The sum of your dice is: {dice_sum}")
     else:
         print("\n😞 Sorry, you lost. Not all dice are ≥ 15.")
     
